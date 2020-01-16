@@ -1,0 +1,23 @@
+{
+  "name": "developer.swedbankpay.com",
+  "version": "1.0.0",
+  "description": "Development portal page for Swedbank",
+  "main": "_build/app.js",
+  "dependencies": {
+    "mermaid.cli": "^0.5.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "mmdc": "mmdc -i temp.mmd"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SwedbankPay/developer.swedbankpay.com.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/SwedbankPay/developer.swedbankpay.com/issues"
+  },
+  "homepage": "https://github.com/SwedbankPay/developer.swedbankpay.com#readme"
+}

@@ -6,3 +6,4 @@ _site/
 .bundle
 .vs
 /temp.mmd
+node_modules/
