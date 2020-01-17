@@ -20,8 +20,6 @@ sidebar:
 
 {% include alert-review-section.md %}
 
-# Swish Redirect and Payment Status
-
 After the payment is confirmed, the consumer will be redirected from the Swish
 app to the `completeUrl` set in the [create payment request][create-payment].
 You need to retrieve payment status with `GET`
@@ -345,7 +343,7 @@ Content-Type: application/json
 
 ### Create Reversal transaction
 
-A reversal transaction can be created after a completed authorization by sending
+A reversal transaction can be created after a completed sale by sending
 a request to `/psp/swish/payments/<payment-id>/reversals`.
 A [callback][technical-reference-callback] request will follow from
 Swedbank Pay.
