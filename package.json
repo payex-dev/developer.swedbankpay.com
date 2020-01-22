@@ -4,11 +4,13 @@
   "description": "Development portal page for Swedbank",
   "main": "_build/app.js",
   "dependencies": {
-    "mermaid.cli": "^0.5.1"
+    "jsdom": "^16.0.1",
+    "mermaid.cli": "^0.5.1",
+    "unescape": "^1.0.1"
   },
   "devDependencies": {},
   "scripts": {
-    "mmdc": "mmdc -i temp.mmd"
+    "mmdc": "mmdc -i _site/index.htmltemp1.mmd"
   },
   "repository": {
     "type": "git",
