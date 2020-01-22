@@ -1,6 +1,6 @@
 repository: SwedbankPay/developer.swedbankpay.com
 remote_theme: SwedbankPay/swedbank-pay-design-guide-jekyll-theme
-exclude: ["Gemfile*", "Rakefile"]
+exclude: ["Gemfile*", "Rakefile", "node_modules/", "_build"]
 plugins:
   - "jekyll-github-metadata"
   - jemoji
