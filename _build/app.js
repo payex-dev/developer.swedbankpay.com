@@ -4,7 +4,7 @@ const path = require('path');
 const decode = require('unescape');
 const jsdom = require("jsdom");
 const { JSDOM } = jsdom;
-const { exec } = require("child_process");
+const { exec, execSync } = require("child_process");
 
 const getAllFiles = function (dirPath, arrayOfFiles) {
   files = fs.readdirSync(dirPath);
@@ -34,19 +34,11 @@ const parseFileContent = function (fileContent, filename) {
     let outputName = `${filename}${counter}.svg`
     let unescaped = decode(content);
 
-    fs.writeFileSync(tempMmdFilename, unescaped);
+    fs.writeFileSync(tempMmdFilename, content);
 
-    exec(`npm run mmdc -i ${tempMmdFilename} -o ${outputName}`, (error, stdout, stderr) => {
-      if (error) {
-        console.log(`error: ${error.message}`);
-        return;
-      }
-      if (stderr) {
-        console.log(`stderr: ${stderr}`);
-        return;
-      }
-      console.log(`stdout: ${stdout}`);
-    });
+    var theout = execSync(`npm run mmdc -i ${tempMmdFilename}`);
+    console.log(theout);
+    let wat = fs.openSync(outputName);
     openingTagIndex = fileContent.indexOf(openingTag, closingTagIndex);
     counter++;
   }

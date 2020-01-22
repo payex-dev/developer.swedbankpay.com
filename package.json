@@ -10,7 +10,7 @@
   },
   "devDependencies": {},
   "scripts": {
-    "mmdc": "mmdc -i _site/index.htmltemp1.mmd"
+    "mmdc": "mmdc"
   },
   "repository": {
     "type": "git",
